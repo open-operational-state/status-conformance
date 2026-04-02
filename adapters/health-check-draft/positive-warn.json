@@ -1,0 +1,23 @@
+{
+    "_metadata": {
+        "description": "Positive: warn status maps to degraded",
+        "layer": "adapter",
+        "polarity": "positive",
+        "fidelity": "semantic"
+    },
+    "input": {
+        "body": {
+            "status": "warn",
+            "serviceId": "payment-service",
+            "description": "Payment processing degraded"
+        }
+    },
+    "expected": {
+        "condition": "degraded",
+        "profiles": ["health"],
+        "subject": {
+            "id": "payment-service"
+        },
+        "provenance": "self-reported"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_metadata": {
+        "description": "Positive: valid discovery document with multiple resources",
+        "layer": "discovery",
+        "polarity": "positive",
+        "fidelity": "structural"
+    },
+    "input": {
+        "version": "1.0",
+        "subject": {
+            "id": "payment-platform",
+            "description": "Payment Processing Platform"
+        },
+        "resources": [
+            {
+                "href": "https://api.example.com/health",
+                "profiles": ["liveness", "readiness", "health"],
+                "serialization": "application/health+json",
+                "auth": "none"
+            },
+            {
+                "href": "https://api.example.com/status",
+                "profiles": ["status"],
+                "serialization": "application/status+json",
+                "auth": "required"
+            }
+        ]
+    },
+    "expected": {
+        "valid": true
+    }
+}

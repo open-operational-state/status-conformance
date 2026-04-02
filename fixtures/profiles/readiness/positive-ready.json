@@ -1,0 +1,22 @@
+{
+    "_metadata": {
+        "description": "Positive: ready condition in readiness profile",
+        "layer": "profile",
+        "polarity": "positive",
+        "fidelity": "structural"
+    },
+    "input": {
+        "condition": "ready",
+        "profiles": ["readiness"],
+        "subject": {
+            "id": "api-gateway"
+        },
+        "timing": {
+            "observed": "2026-04-02T19:30:00Z"
+        },
+        "provenance": "self-reported"
+    },
+    "expected": {
+        "valid": true
+    }
+}

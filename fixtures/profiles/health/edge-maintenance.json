@@ -1,0 +1,24 @@
+{
+    "_metadata": {
+        "description": "Edge case: maintenance condition in health profile",
+        "layer": "profile",
+        "polarity": "positive",
+        "fidelity": "semantic"
+    },
+    "input": {
+        "condition": "maintenance",
+        "profiles": ["health"],
+        "subject": {
+            "id": "payment-api",
+            "description": "Payment API"
+        },
+        "timing": {
+            "observed": "2026-04-02T19:30:00Z",
+            "stateChanged": "2026-04-02T19:00:00Z"
+        },
+        "provenance": "self-reported"
+    },
+    "expected": {
+        "valid": true
+    }
+}

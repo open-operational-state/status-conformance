@@ -1,0 +1,16 @@
+{
+    "_metadata": {
+        "description": "Negative: missing subject object entirely",
+        "layer": "core",
+        "polarity": "negative",
+        "fidelity": "structural"
+    },
+    "input": {
+        "condition": "operational",
+        "profiles": ["health"]
+    },
+    "expected": {
+        "valid": false,
+        "errors": ["MISSING_SUBJECT_ID"]
+    }
+}

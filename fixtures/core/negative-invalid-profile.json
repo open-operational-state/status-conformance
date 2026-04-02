@@ -1,0 +1,19 @@
+{
+    "_metadata": {
+        "description": "Negative: profiles array contains unknown profile identifier",
+        "layer": "core",
+        "polarity": "negative",
+        "fidelity": "semantic"
+    },
+    "input": {
+        "condition": "operational",
+        "profiles": ["nonexistent-profile"],
+        "subject": {
+            "id": "test-service"
+        }
+    },
+    "expected": {
+        "valid": false,
+        "errors": ["UNKNOWN_PROFILE"]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "_metadata": {
+        "description": "Positive: Spring Boot UP status maps to operational",
+        "layer": "adapter",
+        "polarity": "positive",
+        "fidelity": "semantic"
+    },
+    "input": {
+        "body": {
+            "status": "UP",
+            "components": {
+                "db": {
+                    "status": "UP",
+                    "details": {
+                        "database": "PostgreSQL",
+                        "validationQuery": "isValid()"
+                    }
+                },
+                "diskSpace": {
+                    "status": "UP",
+                    "details": {
+                        "total": 499963174912,
+                        "free": 378550042624,
+                        "threshold": 10485760
+                    }
+                }
+            }
+        },
+        "url": "https://api.example.com/actuator/health"
+    },
+    "expected": {
+        "condition": "operational",
+        "profiles": ["health"],
+        "subject": {
+            "id": "https://api.example.com/actuator/health"
+        },
+        "provenance": "self-reported"
+    }
+}

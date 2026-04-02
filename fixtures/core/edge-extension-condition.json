@@ -1,0 +1,22 @@
+{
+    "_metadata": {
+        "description": "Edge case: extension condition value (x-acme-draining)",
+        "layer": "core",
+        "polarity": "positive",
+        "fidelity": "semantic"
+    },
+    "input": {
+        "condition": "x-acme-draining",
+        "profiles": ["health"],
+        "subject": {
+            "id": "draining-service"
+        },
+        "timing": {
+            "observed": "2026-04-02T19:30:00Z"
+        },
+        "provenance": "self-reported"
+    },
+    "expected": {
+        "valid": true
+    }
+}

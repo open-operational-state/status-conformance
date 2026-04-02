@@ -1,0 +1,22 @@
+{
+    "_metadata": {
+        "description": "Positive: Spring Boot OUT_OF_SERVICE maps to down",
+        "layer": "adapter",
+        "polarity": "positive",
+        "fidelity": "semantic"
+    },
+    "input": {
+        "body": {
+            "status": "OUT_OF_SERVICE"
+        },
+        "url": "https://api.example.com/actuator/health"
+    },
+    "expected": {
+        "condition": "down",
+        "profiles": ["health"],
+        "subject": {
+            "id": "https://api.example.com/actuator/health"
+        },
+        "provenance": "self-reported"
+    }
+}

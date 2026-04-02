@@ -1,0 +1,83 @@
+{
+    "_metadata": {
+        "description": "Positive: full service-status serialization with components, dependencies, incidents",
+        "layer": "serialization",
+        "polarity": "positive",
+        "fidelity": "structural"
+    },
+    "input": {
+        "condition": "degraded",
+        "profiles": ["status"],
+        "subject": {
+            "id": "payment-platform",
+            "description": "Payment Processing Platform",
+            "version": "3.2.1",
+            "contact": "platform-team@example.com"
+        },
+        "timing": {
+            "observed": "2026-04-02T19:30:00Z",
+            "reported": "2026-04-02T19:30:01Z",
+            "stateChanged": "2026-04-02T19:15:00Z"
+        },
+        "provenance": "self-reported",
+        "evidence": {
+            "type": "error-rate",
+            "detail": "7.2% error rate on payment processing"
+        },
+        "scope": {
+            "type": "region",
+            "identifier": "us-east-1"
+        },
+        "components": [
+            {
+                "id": "api",
+                "condition": "operational",
+                "description": "REST API"
+            },
+            {
+                "id": "cache",
+                "condition": "down",
+                "criticality": "high",
+                "evidence": {
+                    "type": "connectivity",
+                    "detail": "Connection refused on port 6379"
+                }
+            },
+            {
+                "id": "worker",
+                "condition": "operational",
+                "description": "Background job processor"
+            }
+        ],
+        "dependencies": [
+            {
+                "id": "database",
+                "condition": "operational",
+                "description": "Primary PostgreSQL cluster"
+            },
+            {
+                "id": "message-queue",
+                "condition": "degraded",
+                "evidence": {
+                    "type": "latency",
+                    "detail": "p99 latency: 450ms (threshold: 200ms)"
+                }
+            }
+        ],
+        "incidents": [
+            {
+                "id": "INC-2026-0402",
+                "summary": "Redis cache failure causing degraded payment processing",
+                "severity": "high",
+                "began": "2026-04-02T19:15:00Z"
+            }
+        ],
+        "links": {
+            "self": "https://api.example.com/status",
+            "incidents": "https://status.example.com/incidents"
+        }
+    },
+    "expected": {
+        "valid": true
+    }
+}
