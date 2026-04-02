@@ -1,0 +1,20 @@
+{
+  "_metadata": {
+    "layer": "profiles",
+    "profile": "liveness",
+    "polarity": "positive",
+    "description": "Valid Liveness profile response — minimal alive signal",
+    "license": "CC-BY-4.0"
+  },
+  "input": {
+    "condition": "alive",
+    "profiles": ["liveness"],
+    "subject": {
+      "id": "api-gateway"
+    }
+  },
+  "expected": {
+    "valid": true,
+    "profiles_satisfied": ["liveness"]
+  }
+}

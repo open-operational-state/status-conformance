@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "layer": "core",
+    "polarity": "negative",
+    "description": "Snapshot missing required condition field",
+    "license": "CC-BY-4.0"
+  },
+  "input": {
+    "profiles": ["liveness"],
+    "subject": {
+      "id": "test-service"
+    }
+  },
+  "expected": {
+    "valid": false,
+    "error": "Missing required field: condition"
+  }
+}

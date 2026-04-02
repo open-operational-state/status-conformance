@@ -1,0 +1,26 @@
+{
+  "_metadata": {
+    "layer": "adapter",
+    "adapter": "plain-http",
+    "polarity": "positive",
+    "fidelity": "heuristic",
+    "description": "HTTP 200 response mapped to alive via plain HTTP adapter",
+    "license": "CC-BY-4.0"
+  },
+  "input": {
+    "url": "https://api.example.com/health",
+    "http_status": 200,
+    "headers": {
+      "Date": "Wed, 02 Apr 2026 19:30:00 GMT"
+    },
+    "body": "OK"
+  },
+  "expected": {
+    "condition": "alive",
+    "profiles": ["liveness"],
+    "subject": {
+      "id": "https://api.example.com/health"
+    },
+    "provenance": "externally-observed"
+  }
+}

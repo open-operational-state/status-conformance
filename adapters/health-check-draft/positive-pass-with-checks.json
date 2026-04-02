@@ -1,0 +1,50 @@
+{
+  "_metadata": {
+    "layer": "adapter",
+    "adapter": "health-check-draft",
+    "polarity": "positive",
+    "fidelity": "lossless",
+    "description": "draft-inadarei pass response mapped to operational via health-check-draft adapter",
+    "license": "CC-BY-4.0"
+  },
+  "input": {
+    "content_type": "application/health+json",
+    "body": {
+      "status": "pass",
+      "serviceId": "authz-service",
+      "description": "Authorization Service",
+      "checks": {
+        "cassandra:responseTime": [
+          {
+            "componentId": "dfd6cf2b",
+            "componentType": "datastore",
+            "observedValue": 250,
+            "observedUnit": "ms",
+            "status": "pass",
+            "time": "2026-04-02T19:30:00Z"
+          }
+        ]
+      }
+    }
+  },
+  "expected": {
+    "condition": "operational",
+    "profiles": ["health"],
+    "subject": {
+      "id": "authz-service",
+      "description": "Authorization Service"
+    },
+    "provenance": "self-reported",
+    "checks": {
+      "cassandra": {
+        "condition": "operational",
+        "role": "dependency",
+        "evidence": {
+          "type": "responseTime",
+          "observedValue": 250,
+          "observedUnit": "ms"
+        }
+      }
+    }
+  }
+}

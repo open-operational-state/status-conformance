@@ -1,0 +1,48 @@
+{
+  "_metadata": {
+    "layer": "profiles",
+    "profile": "health",
+    "polarity": "positive",
+    "description": "Valid Health profile response with components and evidence",
+    "license": "CC-BY-4.0"
+  },
+  "input": {
+    "condition": "degraded",
+    "profiles": ["health"],
+    "subject": {
+      "id": "payment-service",
+      "description": "Payment Processing Service"
+    },
+    "timing": {
+      "observed": "2026-04-02T19:30:00Z"
+    },
+    "provenance": "self-reported",
+    "evidence": {
+      "type": "error-rate",
+      "detail": "Error rate at 7.2%, threshold is 5%"
+    },
+    "checks": {
+      "database": {
+        "condition": "operational",
+        "role": "dependency",
+        "evidence": {
+          "type": "response-time",
+          "observedValue": 45,
+          "observedUnit": "ms"
+        }
+      },
+      "cache": {
+        "condition": "down",
+        "role": "component",
+        "evidence": {
+          "type": "connectivity",
+          "detail": "Connection refused"
+        }
+      }
+    }
+  },
+  "expected": {
+    "valid": true,
+    "profiles_satisfied": ["health", "readiness", "liveness"]
+  }
+}

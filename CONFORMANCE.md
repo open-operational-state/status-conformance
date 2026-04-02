@@ -18,15 +18,37 @@ Conformance enables:
 
 ## Conformance Levels
 
-Conformance levels will be defined as the specification matures. They are expected to follow a tiered structure:
+Conformance is assessed at three tiers. Each tier builds on the previous one.
 
-### Anticipated Tiers
+### Basic
 
-1. **Basic** — minimal viable conformance (e.g., a valid operational-state response in at least one serialization)
-2. **Standard** — full compliance with a specific profile and serialization
-3. **Extended** — support for discovery, capabilities, and multiple profiles/serializations
+A target achieves **Basic** conformance when:
 
-Exact tier definitions depend on the specification reaching sufficient maturity. Premature level definitions risk constraining spec evolution.
+- It serves a valid operational-state response in at least one recognized serialization (`application/health+json` or `application/status+json`)
+- The response satisfies at least the **Liveness** profile requirements (Subject + Condition)
+- The `condition` field uses a value from the appropriate condition vocabulary
+- The `profiles` field is present and contains at least one valid profile identifier
+
+### Standard
+
+A target achieves **Standard** conformance when it meets Basic requirements and additionally:
+
+- It satisfies the full requirements of at least one declared profile (all MUST-level concepts present)
+- It serves a valid discovery document at `/.well-known/operational-state`
+- Field names and structure match the declared serialization specification
+- Condition values are valid for all declared profiles
+- Timing fields use RFC 3339 format when present
+
+### Extended
+
+A target achieves **Extended** conformance when it meets Standard requirements and additionally:
+
+- It supports multiple profiles (e.g., both Health and Liveness)
+- It provides Link header-based discovery (`rel="operational-state"`)
+- It serves a discovery document that accurately describes all available resources
+- Component and dependency conditions use valid vocabulary values
+- Provenance is explicitly declared (not inferred)
+- Evidence is present for non-operational conditions (Health profile and above)
 
 ## What Conformance Validates
 
@@ -41,7 +63,7 @@ Conformance testing covers:
 ## Relationship to Other Repositories
 
 - **[status-spec](https://github.com/open-operational-state/status-spec)** defines what conformance validates against
-- **[status-tooling](https://github.com/open-operational-state/status-tooling)** provides the `validator` package that implements conformance checks
+- **[status-tooling](https://github.com/open-operational-state/status-tooling)** will provide the `validator` package that implements conformance checks
 - **This repository** defines the conformance model, fixtures, taxonomy, and reports
 
 ## Conformance Is Not Certification

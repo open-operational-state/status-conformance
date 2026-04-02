@@ -1,0 +1,19 @@
+{
+  "_metadata": {
+    "layer": "core",
+    "polarity": "negative",
+    "description": "Snapshot with invalid free-form condition value",
+    "license": "CC-BY-4.0"
+  },
+  "input": {
+    "condition": "kinda-sorta-working",
+    "profiles": ["health"],
+    "subject": {
+      "id": "test-service"
+    }
+  },
+  "expected": {
+    "valid": false,
+    "error": "Invalid condition value: 'kinda-sorta-working' is not in the Health vocabulary and does not use x-{vendor}-{value} extension format"
+  }
+}

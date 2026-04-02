@@ -1,0 +1,31 @@
+{
+  "_metadata": {
+    "layer": "serializations",
+    "serialization": "health-response",
+    "polarity": "positive",
+    "description": "Valid health-response serialization with all optional fields",
+    "license": "CC-BY-4.0"
+  },
+  "input": {
+    "condition": "operational",
+    "profiles": ["liveness", "readiness", "health"],
+    "subject": {
+      "id": "user-service",
+      "description": "User Management Service"
+    },
+    "timing": {
+      "observed": "2026-04-02T19:30:00Z",
+      "reported": "2026-04-02T19:30:01Z"
+    },
+    "provenance": "self-reported",
+    "links": {
+      "self": "https://api.example.com/health",
+      "operational-state": "https://api.example.com/status"
+    }
+  },
+  "expected": {
+    "valid": true,
+    "content_type": "application/health+json",
+    "profiles_satisfied": ["liveness", "readiness", "health"]
+  }
+}

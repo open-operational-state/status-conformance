@@ -1,0 +1,19 @@
+{
+  "_metadata": {
+    "layer": "core",
+    "polarity": "positive",
+    "description": "Minimal valid snapshot with a single condition statement",
+    "license": "CC-BY-4.0"
+  },
+  "input": {
+    "condition": "operational",
+    "profiles": ["liveness"],
+    "subject": {
+      "id": "test-service"
+    }
+  },
+  "expected": {
+    "valid": true,
+    "profiles_satisfied": ["liveness"]
+  }
+}
