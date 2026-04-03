@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
-- `fixtures/profiles/health/pattern-coarse-public.json` — pattern fixture demonstrating minimal coarse-public health response (condition + subject only)
+- `fixtures/profiles/health/pattern-coarse-public.json` — pattern fixture demonstrating minimal coarse-public health response (condition + profiles + subject)
 
 ## [0.1.1] — 2026-04-03
 

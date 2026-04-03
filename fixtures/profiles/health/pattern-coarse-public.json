@@ -1,12 +1,12 @@
 {
     "_metadata": {
-        "description": "Pattern fixture: coarse public health response with condition only — demonstrates the recommended minimal public exposure pattern from security-considerations.md",
+        "description": "Pattern fixture: coarse public health response with condition, profiles, and subject — demonstrates the recommended minimal public exposure pattern from security-considerations.md",
         "layer": "profiles",
         "polarity": "positive",
         "fidelity": "semantic",
         "profile": "health",
         "pattern": "coarse-public",
-        "license": "CC0-1.0"
+        "license": "CC-BY-4.0"
     },
     "input": {
         "condition": "operational",
