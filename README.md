@@ -4,7 +4,7 @@ Conformance definitions, fixtures, test taxonomy, and compatibility validation f
 
 ## Overview
 
-Conformance is a strategic asset, not an afterthought. This repository defines how implementations demonstrate compliance with the standard and how interoperability is validated.
+This repository contains the test fixtures and conformance definitions that validate implementations of the Open Operational State standard. If you're building a parser, emitter, or validator, these fixtures define what correct behavior looks like.
 
 ## Contents
 
