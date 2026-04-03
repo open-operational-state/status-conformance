@@ -32,6 +32,4 @@ See [TAXONOMY.md](../TAXONOMY.md) for classification details.
 - Documentation-like fixtures (examples, sample payloads): [CC BY 4.0](../LICENSE-CC-BY-4.0)
 - Code-like fixtures (intended for direct use in tests): [Apache 2.0](../LICENSE)
 
-## Status
 
-Fixtures will be created as the specification progresses. This directory is intentionally empty during the scaffolding phase.
