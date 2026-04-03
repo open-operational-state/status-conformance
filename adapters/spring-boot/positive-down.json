@@ -1,0 +1,37 @@
+{
+    "_metadata": {
+        "description": "Positive: Spring Boot DOWN status maps to down",
+        "layer": "adapter",
+        "polarity": "positive",
+        "fidelity": "mapping",
+        "adapter": "spring-boot",
+        "license": "Apache-2.0"
+    },
+    "input": {
+        "body": {
+            "status": "DOWN",
+            "components": {
+                "db": {
+                    "status": "DOWN",
+                    "details": {
+                        "error": "Connection refused: connect"
+                    }
+                },
+                "diskSpace": {
+                    "status": "UP"
+                }
+            }
+        },
+        "url": "https://api.example.com/actuator/health"
+    },
+    "expected": {
+        "condition": "down",
+        "profiles": [
+            "health"
+        ],
+        "subject": {
+            "id": "https://api.example.com/actuator/health"
+        },
+        "provenance": "self-reported"
+    }
+}

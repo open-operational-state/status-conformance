@@ -1,0 +1,24 @@
+{
+    "_metadata": {
+        "description": "Negative: connection refused on plain HTTP probe",
+        "layer": "adapter",
+        "polarity": "negative",
+        "fidelity": "heuristic",
+        "adapter": "plain-http",
+        "license": "CC0-1.0"
+    },
+    "input": {
+        "url": "https://api.example.com/health",
+        "connection_error": true
+    },
+    "expected": {
+        "condition": "unreachable",
+        "profiles": [
+            "liveness"
+        ],
+        "subject": {
+            "id": "https://api.example.com/health"
+        },
+        "provenance": "externally-observed"
+    }
+}

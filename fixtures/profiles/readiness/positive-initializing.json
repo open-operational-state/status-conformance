@@ -1,0 +1,26 @@
+{
+    "_metadata": {
+        "description": "Positive: initializing condition in readiness profile",
+        "layer": "profiles",
+        "polarity": "positive",
+        "fidelity": "structural",
+        "profile": "readiness",
+        "license": "CC0-1.0"
+    },
+    "input": {
+        "condition": "initializing",
+        "profiles": [
+            "readiness"
+        ],
+        "subject": {
+            "id": "api-gateway"
+        },
+        "timing": {
+            "observed": "2026-04-02T19:30:00Z"
+        },
+        "provenance": "self-reported"
+    },
+    "expected": {
+        "valid": true
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "_metadata": {
+        "description": "Positive: HTTP 500 still maps to alive (service responded)",
+        "layer": "adapter",
+        "polarity": "positive",
+        "fidelity": "heuristic",
+        "adapter": "plain-http",
+        "license": "CC0-1.0"
+    },
+    "input": {
+        "url": "https://api.example.com/health",
+        "http_status": 500,
+        "headers": {}
+    },
+    "expected": {
+        "condition": "alive",
+        "profiles": [
+            "liveness"
+        ],
+        "subject": {
+            "id": "https://api.example.com/health"
+        },
+        "provenance": "externally-observed"
+    }
+}

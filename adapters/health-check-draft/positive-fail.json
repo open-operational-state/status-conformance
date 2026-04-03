@@ -1,0 +1,27 @@
+{
+    "_metadata": {
+        "description": "Positive: fail status maps to down",
+        "layer": "adapter",
+        "polarity": "positive",
+        "fidelity": "mapping",
+        "adapter": "health-check-draft",
+        "license": "CC0-1.0"
+    },
+    "input": {
+        "body": {
+            "status": "fail",
+            "serviceId": "payment-service",
+            "output": "Database connection pool exhausted"
+        }
+    },
+    "expected": {
+        "condition": "down",
+        "profiles": [
+            "health"
+        ],
+        "subject": {
+            "id": "payment-service"
+        },
+        "provenance": "self-reported"
+    }
+}
