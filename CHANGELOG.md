@@ -5,10 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 
-## [Unreleased]
+## [0.1.2] — 2026-04-03
 
 ### Added
 - `fixtures/profiles/health/pattern-coarse-public.json` — pattern fixture demonstrating minimal coarse-public health response (condition + profiles + subject)
+
+### Changed
+- Standardized all fixture `_metadata.license` fields to `CC-BY-4.0` (was mixed `CC0-1.0` / `CC-BY-4.0`)
 
 ## [0.1.1] — 2026-04-03
 
