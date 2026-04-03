@@ -4,7 +4,7 @@
         "layer": "discovery",
         "polarity": "positive",
         "fidelity": "structural",
-        "license": "CC0-1.0"
+        "license": "CC-BY-4.0"
     },
     "input": {
         "version": "1.0",

@@ -1,10 +1,11 @@
 {
     "_metadata": {
-        "description": "Edge: health profile with no timing — valid with warning",
+        "description": "Pattern fixture: coarse public health response with condition, profiles, and subject — demonstrates the recommended minimal public exposure pattern from security-considerations.md",
         "layer": "profiles",
-        "profile": "health",
         "polarity": "positive",
         "fidelity": "semantic",
+        "profile": "health",
+        "pattern": "coarse-public",
         "license": "CC-BY-4.0"
     },
     "input": {
@@ -13,9 +14,8 @@
             "health"
         ],
         "subject": {
-            "id": "plain-http-service"
-        },
-        "provenance": "externally-observed"
+            "id": "my-service"
+        }
     },
     "expected": {
         "valid": true

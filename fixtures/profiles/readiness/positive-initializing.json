@@ -5,7 +5,7 @@
         "polarity": "positive",
         "fidelity": "structural",
         "profile": "readiness",
-        "license": "CC0-1.0"
+        "license": "CC-BY-4.0"
     },
     "input": {
         "condition": "initializing",
