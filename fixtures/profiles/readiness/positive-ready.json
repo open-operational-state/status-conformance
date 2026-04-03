@@ -1,13 +1,17 @@
 {
     "_metadata": {
         "description": "Positive: ready condition in readiness profile",
-        "layer": "profile",
+        "layer": "profiles",
         "polarity": "positive",
-        "fidelity": "structural"
+        "fidelity": "structural",
+        "profile": "readiness",
+        "license": "CC0-1.0"
     },
     "input": {
         "condition": "ready",
-        "profiles": ["readiness"],
+        "profiles": [
+            "readiness"
+        ],
         "subject": {
             "id": "api-gateway"
         },

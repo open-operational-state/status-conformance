@@ -1,13 +1,17 @@
 {
     "_metadata": {
         "description": "Positive: full service-status serialization with components, dependencies, incidents",
-        "layer": "serialization",
+        "layer": "serializations",
         "polarity": "positive",
-        "fidelity": "structural"
+        "fidelity": "structural",
+        "serialization": "service-status",
+        "license": "CC0-1.0"
     },
     "input": {
         "condition": "degraded",
-        "profiles": ["status"],
+        "profiles": [
+            "status"
+        ],
         "subject": {
             "id": "payment-platform",
             "description": "Payment Processing Platform",

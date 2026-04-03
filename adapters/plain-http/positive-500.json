@@ -3,7 +3,9 @@
         "description": "Positive: HTTP 500 still maps to alive (service responded)",
         "layer": "adapter",
         "polarity": "positive",
-        "fidelity": "semantic"
+        "fidelity": "heuristic",
+        "adapter": "plain-http",
+        "license": "CC0-1.0"
     },
     "input": {
         "url": "https://api.example.com/health",
@@ -12,7 +14,9 @@
     },
     "expected": {
         "condition": "alive",
-        "profiles": ["liveness"],
+        "profiles": [
+            "liveness"
+        ],
         "subject": {
             "id": "https://api.example.com/health"
         },

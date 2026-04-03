@@ -3,7 +3,9 @@
         "description": "Positive: fail status maps to down",
         "layer": "adapter",
         "polarity": "positive",
-        "fidelity": "semantic"
+        "fidelity": "mapping",
+        "adapter": "health-check-draft",
+        "license": "CC0-1.0"
     },
     "input": {
         "body": {
@@ -14,7 +16,9 @@
     },
     "expected": {
         "condition": "down",
-        "profiles": ["health"],
+        "profiles": [
+            "health"
+        ],
         "subject": {
             "id": "payment-service"
         },

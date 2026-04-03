@@ -3,7 +3,9 @@
         "description": "Positive: warn status maps to degraded",
         "layer": "adapter",
         "polarity": "positive",
-        "fidelity": "semantic"
+        "fidelity": "mapping",
+        "adapter": "health-check-draft",
+        "license": "CC0-1.0"
     },
     "input": {
         "body": {
@@ -14,7 +16,9 @@
     },
     "expected": {
         "condition": "degraded",
-        "profiles": ["health"],
+        "profiles": [
+            "health"
+        ],
         "subject": {
             "id": "payment-service"
         },

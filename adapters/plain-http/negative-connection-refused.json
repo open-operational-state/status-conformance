@@ -3,7 +3,9 @@
         "description": "Negative: connection refused on plain HTTP probe",
         "layer": "adapter",
         "polarity": "negative",
-        "fidelity": "structural"
+        "fidelity": "heuristic",
+        "adapter": "plain-http",
+        "license": "CC0-1.0"
     },
     "input": {
         "url": "https://api.example.com/health",
@@ -11,7 +13,9 @@
     },
     "expected": {
         "condition": "unreachable",
-        "profiles": ["liveness"],
+        "profiles": [
+            "liveness"
+        ],
         "subject": {
             "id": "https://api.example.com/health"
         },

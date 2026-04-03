@@ -3,14 +3,17 @@
         "description": "Negative: missing subject object entirely",
         "layer": "core",
         "polarity": "negative",
-        "fidelity": "structural"
+        "fidelity": "structural",
+        "license": "CC0-1.0"
     },
     "input": {
         "condition": "operational",
-        "profiles": ["health"]
+        "profiles": [
+            "health"
+        ]
     },
     "expected": {
         "valid": false,
-        "errors": ["MISSING_SUBJECT_ID"]
+        "error": "MISSING_SUBJECT_ID"
     }
 }

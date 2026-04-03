@@ -3,11 +3,14 @@
         "description": "Edge case: extension condition value (x-acme-draining)",
         "layer": "core",
         "polarity": "positive",
-        "fidelity": "semantic"
+        "fidelity": "semantic",
+        "license": "CC0-1.0"
     },
     "input": {
         "condition": "x-acme-draining",
-        "profiles": ["health"],
+        "profiles": [
+            "health"
+        ],
         "subject": {
             "id": "draining-service"
         },

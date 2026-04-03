@@ -3,17 +3,20 @@
         "description": "Negative: profiles array contains unknown profile identifier",
         "layer": "core",
         "polarity": "negative",
-        "fidelity": "semantic"
+        "fidelity": "semantic",
+        "license": "CC0-1.0"
     },
     "input": {
         "condition": "operational",
-        "profiles": ["nonexistent-profile"],
+        "profiles": [
+            "nonexistent-profile"
+        ],
         "subject": {
             "id": "test-service"
         }
     },
     "expected": {
         "valid": false,
-        "errors": ["UNKNOWN_PROFILE"]
+        "error": "INVALID_PROFILE"
     }
 }

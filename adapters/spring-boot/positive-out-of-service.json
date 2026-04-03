@@ -3,7 +3,9 @@
         "description": "Positive: Spring Boot OUT_OF_SERVICE maps to down",
         "layer": "adapter",
         "polarity": "positive",
-        "fidelity": "semantic"
+        "fidelity": "mapping",
+        "adapter": "spring-boot",
+        "license": "Apache-2.0"
     },
     "input": {
         "body": {
@@ -13,7 +15,9 @@
     },
     "expected": {
         "condition": "down",
-        "profiles": ["health"],
+        "profiles": [
+            "health"
+        ],
         "subject": {
             "id": "https://api.example.com/actuator/health"
         },
