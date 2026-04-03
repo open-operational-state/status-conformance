@@ -1,0 +1,23 @@
+{
+    "_metadata": {
+        "description": "Edge: health profile with no timing — valid with warning",
+        "layer": "profiles",
+        "profile": "health",
+        "polarity": "positive",
+        "fidelity": "semantic",
+        "license": "CC0-1.0"
+    },
+    "input": {
+        "condition": "operational",
+        "profiles": [
+            "health"
+        ],
+        "subject": {
+            "id": "plain-http-service"
+        },
+        "provenance": "externally-observed"
+    },
+    "expected": {
+        "valid": true
+    }
+}
