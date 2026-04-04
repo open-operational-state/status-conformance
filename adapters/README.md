@@ -32,7 +32,7 @@ Adapters are classified by fidelity:
 ## Relationship to Other Repositories
 
 - **[status-spec/spec/adapters.md](https://github.com/open-operational-state/status-spec/blob/main/spec/adapters.md)** defines adapter concepts
-- **[status-tooling](https://github.com/open-operational-state/status-tooling)** implements adapter logic
+- **[status-tooling-js](https://github.com/open-operational-state/status-tooling-js)** implements adapter logic
 - **This directory** validates that adapters conform to the specification
 
 ## Status

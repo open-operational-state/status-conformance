@@ -63,7 +63,7 @@ Conformance testing covers:
 ## Relationship to Other Repositories
 
 - **[status-spec](https://github.com/open-operational-state/status-spec)** defines what conformance validates against
-- **[status-tooling](https://github.com/open-operational-state/status-tooling)** will provide the `validator` package that implements conformance checks
+- **[status-tooling-js](https://github.com/open-operational-state/status-tooling-js)** will provide the `validator` package that implements conformance checks
 - **This repository** defines the conformance model, fixtures, taxonomy, and reports
 
 ## Conformance Is Not Certification
