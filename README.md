@@ -22,7 +22,7 @@ This repository contains the test fixtures and conformance definitions that vali
 | Repository | Purpose |
 |---|---|
 | [status-spec](https://github.com/open-operational-state/status-spec) | Technical specification (what conformance validates against) |
-| [status-tooling](https://github.com/open-operational-state/status-tooling) | Reference tooling including the validator package |
+| [status-tooling-js](https://github.com/open-operational-state/status-tooling-js) | Reference tooling including the validator package |
 | [governance](https://github.com/open-operational-state/governance) | Charter, scope, and terminology |
 
 ## Licensing
